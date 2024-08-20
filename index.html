@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Get URL Parameters</title>
+</head>
+
+<body>
+    <script>
+        function getQueryParams() {
+            const params = new URLSearchParams(window.location.search);
+            const result = {};
+            for (const [key, value] of params.entries()) {
+                result[key] = value;
+            }
+            return result;
+        }
+
+        // Example usage:
+        const params = getQueryParams();
+        document.write(JSON.stringify(params));
+    </script>
+</body>
+
+</html>
